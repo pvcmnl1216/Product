@@ -30,12 +30,12 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public int delete(Integer productId) {
+    public String  delete(Integer productId) {
         if (productRepository.findById(productId).isEmpty()) {
-         return Integer.parseInt("user does not exist");
+         return "user does not exist";
         }
         productRepository.deleteById(productId);
-        return Integer.parseInt("user delete successfully");
+        return "user delete successfully";
     }
 
     @Override

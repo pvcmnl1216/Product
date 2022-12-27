@@ -18,11 +18,11 @@ public class ProductController {
 
     @Autowired
     ProductService productService;
-   @PostMapping
+   @PostMapping("product")
     public ResponseEntity<?> saveAll(@RequestBody Product product){
         return new ResponseEntity<>(productService.save(product), HttpStatus.OK);
     }
-    @GetMapping
+    @GetMapping("product")
     public ResponseEntity<?> getALl(){
         return new ResponseEntity<>(productService.getAll(),HttpStatus.OK);
     }

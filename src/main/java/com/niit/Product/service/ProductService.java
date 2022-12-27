@@ -10,7 +10,7 @@ public interface ProductService {
 
     public List<Product> getAll();
 
-    public int delete(Integer productId);
+    public String  delete(Integer productId);
 
     public Product getById(Integer productId);
 }
